@@ -172,7 +172,7 @@
   padding-bottom: 2rem;
 }
 .about .jobs {
-  width: 60%;
+  width: 60vw;
   margin: 2rem auto 0 auto;
   display: grid;
   grid-template-columns: 1fr;
@@ -196,6 +196,86 @@
   margin: 0.3rem;
 }
 .about footer {
+  transform: rotate(90deg) translate(-3rem, -5rem);
+}
+
+.project {
+  padding-bottom: 2rem;
+  overflow: hidden;
+}
+.project-bio_img {
+  height: 30vh;
+  width: 100vw;
+  background: linear-gradient(to right, rgba(39, 39, 39, 0.9), rgba(39, 39, 39, 0.3)), url("../img/model-1.jpg") center top;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+}
+.project-bio_img .text-secondary {
+  margin-bottom: 2rem;
+  font-size: 2rem;
+}
+.project_items {
+  width: 60vw;
+  margin: 2rem auto 0 auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 2rem;
+}
+.project_item {
+  position: relative;
+  border-bottom: 5px solid #ff652f;
+  overflow: hidden;
+  cursor: pointer;
+}
+.project_item img {
+  width: 100%;
+}
+.project_item::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: #ff652f;
+  opacity: 0;
+  transition: all 0.4s ease-in-out;
+}
+.project_item:hover::after {
+  top: 0;
+  opacity: 0.9;
+}
+.project_item:hover .project_btn {
+  opacity: 1;
+}
+.project_btns {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  text-align: center;
+}
+.project_btn {
+  opacity: 0;
+  color: #000;
+  transition: all 0.4s ease-in-out;
+}
+.project_btn:hover {
+  color: #fff;
+}
+.project .social-icons {
+  display: flex;
+  flex-direction: column;
+  margin: 0.3rem;
+}
+.project footer {
   transform: rotate(90deg) translate(-3rem, -5rem);
 }
 
